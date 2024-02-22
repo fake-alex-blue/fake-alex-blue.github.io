@@ -1,4 +1,4 @@
-import {starnames} from "./resources/starnames.js";
+import {starnames} from "./starnames.js";
 
 // ======== Sound & Music ========
 class AudioController {
@@ -947,7 +947,7 @@ function assignCoordinates(stars){
         highestLevelStar.name = "Founders\n Star";
     } else { highestLevelStar.name = "Coda\n Galaxy"}
     game.destinationStar = highestLevelStar;
-    this.destinationStarName = highestLevelStar.name;
+    game.destinationStarName = highestLevelStar.name;
 
     // Set xy values for ship
     ship.x = highestLevelStar.x;
