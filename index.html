@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Navigator</title>
+    <link rel="stylesheet" href="./resources/style.css">
+    <script src="./resources/drag.js" defer></script>
+    <script src="./resources/game.js" defer type="module"></script>
+</head>
+<body>
+    <div class="page-container" id="root">
+            <div class="stars-one" id="stars-one"></div>
+            <div class="stars-two" id="stars-two"></div>
+            <div class="stars-three" id="stars-three"></div>
+
+        <div class="game-container" id="content">
+            
+            <header>
+                <h1 class="game-title">Navigator</h1>
+                
+                <div class="resource-slot">
+                    <img src="./resources/svg/counters/0W.svg" alt="" id="resource-W">
+                </div>
+                <div class="resource-slot">
+                    <img src="./resources/svg/counters/0V.svg" alt="" id="resource-V">
+                </div>
+                <div class="resource-slot">
+                    <img src="./resources/svg/counters/0S.svg" alt="" id="resource-S">
+                </div>
+                <div class="resource-slot">
+                    <img src="./resources/svg/counters/0C.svg" alt="" id="resource-C">
+                </div>
+                <div class="resource-slot">
+                    <h2><span id="flips">48</span></h2>
+                </div>
+            </header>
+            
+            <div class="layout-container">
+                <div id="game-grid">
+                </div>
+
+                <div class="starMap" id="starMap">
+                    
+                    <div class="node template" id="starTemplate"><div class="starDetailsContainer"><p class="nodename">long name</p><div class="resourceReq"></div></div></div>
+                    <div id="shipNode"><img src="./resources/svg/ship.svg" alt="" ></div>
+                    <svg id="svg-container"></svg>
+                </div>
+
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="scrollMessage" id="scrollMessage"><p>Middle-mouse to pan / zoom. <span id="scrollMessageClose">x</span></p></div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 198.43 340.16">
+  <defs>
+    <style>
+      .cls-1{fill:#fff}
+    </style>
+  </defs>
+  <g id="Layer_1-2">
+    <g id="Back">
+      <rect id="BG" width="198.43" height="340.16" rx="14.17" ry="14.17" style="fill:#000000"/>
+      <g id="Hatching">
+        <path class="cls-1" transform="rotate(-45 30.67 66.36)" d="M21.72 65.86H39.6v.99H21.72z"/>
+        <path class="cls-1" transform="rotate(-45 30.65 66.35)" d="M30.16 57.41h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 99.21 66.35)" d="M90.27 65.86h17.88v.99H90.27z"/>
+        <path class="cls-1" transform="rotate(-45 99.21 66.35)" d="M98.72 57.41h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 167.76 66.35)" d="M158.82 65.86h17.88v.99h-17.88z"/>
+        <path class="cls-1" transform="rotate(-45 167.76 66.35)" d="M167.27 57.41h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 30.67 136.9)" d="M21.72 136.4H39.6v.99H21.72z"/>
+        <path class="cls-1" transform="rotate(-45 30.65 136.9)" d="M30.16 127.96h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 99.21 136.9)" d="M90.27 136.4h17.88v.99H90.27z"/>
+        <path class="cls-1" transform="rotate(-45 99.21 136.9)" d="M98.72 127.96h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 167.76 136.9)" d="M158.82 136.4h17.88v.99h-17.88z"/>
+        <path class="cls-1" transform="rotate(-45 167.76 136.9)" d="M167.27 127.96h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 30.66 207.44)" d="M21.72 206.94H39.6v.99H21.72z"/>
+        <path class="cls-1" transform="rotate(-45 30.65 207.43)" d="M30.16 198.5h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 99.21 207.43)" d="M90.27 206.94h17.88v.99H90.27z"/>
+        <path class="cls-1" transform="rotate(-45 99.2 207.43)" d="M98.72 198.5h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 167.77 207.44)" d="M158.82 206.94h17.88v.99h-17.88z"/>
+        <path class="cls-1" transform="rotate(-45 167.76 207.43)" d="M167.27 198.5h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 30.66 277.98)" d="M21.72 277.49H39.6v.99H21.72z"/>
+        <path class="cls-1" transform="rotate(-45 30.65 277.97)" d="M30.16 269.04h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 99.21 277.98)" d="M90.27 277.49h17.88v.99H90.27z"/>
+        <path class="cls-1" transform="rotate(-45 99.2 277.97)" d="M98.72 269.04h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 167.77 277.99)" d="M158.82 277.49h17.88v.99h-17.88z"/>
+        <path class="cls-1" transform="rotate(-45 167.75 277.97)" d="M167.27 269.04h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 64.94 32.07)" d="M56 31.58h17.88v.99H56z"/>
+        <path class="cls-1" transform="rotate(-45 64.94 32.07)" d="M64.44 23.14h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 133.5 32.09)" d="M124.55 31.58h17.88v.99h-17.88z"/>
+        <path class="cls-1" transform="rotate(-45 133.5 32.09)" d="M132.99 23.14h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 133.48 308.08)" d="M124.55 307.58h17.88v.99h-17.88z"/>
+        <path class="cls-1" transform="rotate(-45 133.48 308.08)" d="M132.99 299.14h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 64.94 308.07)" d="M56 307.58h17.88v.99H56z"/>
+        <path class="cls-1" transform="rotate(-45 64.94 308.09)" d="M64.44 299.14h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 129.38 239.08)" d="M120.44 238.58h17.88v.99h-17.88z"/>
+        <path class="cls-1" transform="rotate(-45 129.38 239.08)" d="M128.89 230.14h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 60.83 239.08)" d="M51.89 238.58h17.88v.99H51.89z"/>
+        <path class="cls-1" transform="rotate(-45 60.83 239.08)" d="M60.34 230.14h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 129.86 170.08)" d="M120.91 169.58h17.88v.99h-17.88z"/>
+        <path class="cls-1" transform="rotate(-45 129.86 170.08)" d="M129.36 161.14h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 61.3 170.08)" d="M52.36 169.58h17.88v.99H52.36z"/>
+        <path class="cls-1" transform="rotate(-45 61.3 170.08)" d="M60.81 161.14h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 133.5 101.09)" d="M124.55 100.58h17.88v.99h-17.88z"/>
+        <path class="cls-1" transform="rotate(-45 133.48 101.08)" d="M132.99 92.14h.99v17.88h-.99z"/>
+        <path class="cls-1" transform="rotate(-45 64.94 101.07)" d="M56 100.58h17.88v.99H56z"/>
+        <path class="cls-1" transform="rotate(-45 64.94 101.07)" d="M64.44 92.14h.99v17.88h-.99z"/>
+      </g>
+      <path id="Border" class="cls-1" d="M170.58 326.48H27.85v-.5a13.7 13.7 0 0 0-13.68-13.68h-.5V27.84h.5a13.7 13.7 0 0 0 13.68-13.67v-.5h142.73v.5c0 7.54 6.13 13.67 13.67 13.67h.5V312.3h-.5a13.7 13.7 0 0 0-13.67 13.68v.5Zm-141.74-1h140.75a14.7 14.7 0 0 1 14.16-14.17V28.84a14.7 14.7 0 0 1-14.16-14.16H28.84a14.7 14.7 0 0 1-14.17 14.16v282.47a14.7 14.7 0 0 1 14.17 14.17Z"/>
+    </g>
+  </g>
+</svg>

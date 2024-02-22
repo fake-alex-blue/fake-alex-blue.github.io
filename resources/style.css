@@ -1,0 +1,529 @@
+/* CSS Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/* Fonts */
+
+@font-face {
+    font-family: "A-Space";
+    src: url("./fonts/A-Space_Thin\ Demo.otf") format("opentype");
+}
+
+/* ===== General Styling ===== */
+
+/* Backdrop Stars */
+.page-container {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(at left bottom, #1C2021, #080808) 0%/cover;
+    overflow: hidden;
+}
+
+.stars-one {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: url("./svg/Stars1.svg") 0%/30% repeat;
+}
+
+.stars-two {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: url("./svg/Stars2.svg") 0%/20% repeat;
+    transform: rotateZ(180deg);
+    animation-name: starspin;
+    animation-duration: 1000s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.stars-three {
+    position: absolute;
+    top:0;
+    left:0;
+    background: url("./svg/Stars3.svg") repeat;
+    background-size: 12.5%;
+    height: 2028px;
+    width: 3816px;
+    animation-name: starslide;
+    animation-duration: 240s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+.stars-container {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@keyframes starspin {
+    0% {transform: rotateZ(180deg);}
+    100% {transform: rotateZ(540deg);}
+}
+
+@keyframes starslide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-954px, 0, 0); /* The image width */
+    }
+}
+
+/* == Scroll Message == */
+
+.scrollMessage {
+    position: fixed;
+    bottom: -10px;
+    left: 40%;
+    width: 20%;
+    height: 90px;
+    color: #ffffff;
+    font-family: "A-Space";
+    background-color: #000000CC;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    transform: translateY(80px);
+    transition: transform 1s cubic-bezier( 0.6, -0.28, 0.735, 0.045 );
+}
+
+.scrollMessage p{
+    margin-top:25px;
+}
+
+.messageOnScreen{
+    transform: translateY(0)
+}
+
+.scrollMessage span{
+    font-family: sans-serif;
+    position: absolute;
+    display: block;
+    top: 5px;
+    right: 15px;
+    opacity: 0.5;
+    transition: opacity 300ms;
+    cursor: pointer;
+}
+
+.scrollMessage span:hover{
+    opacity: 1;
+}
+
+/* == Star Map == */
+
+.starMap {
+    position: relative;
+    width: 60%;
+}
+
+.node {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ffffff;
+    background: radial-gradient(circle at center, #ffffff 20%, transparent 20%);
+    position: absolute;
+    transform: translateX(-5px) translateY(-5px) rotate(45deg);
+    cursor: pointer;
+}
+
+.selectedNode {
+    box-shadow: 0 0 3px 2px #ffffff;
+}
+
+
+
+.inaccessibleNode {
+    background: transparent;
+    cursor: default;
+}
+
+.inaccessibleNode .nodename{
+    cursor: default;
+}
+
+.currentNode {
+    background: #ffffff66;
+}
+
+.nodename {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: "A-Space", sans-serif;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    transform-origin: top left;
+    
+    width: max-content;
+    padding: 5px;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+
+
+.starDetailsContainer{
+    display:grid;
+    grid-auto-rows: auto;
+    transform: rotate(-45deg) translateX(45px) translateY(-10px);
+}
+.resourceReq {
+    position: relative;
+    width: 40px;
+    height: 45px;
+    opacity: 0;
+    background-color: #00000066;
+    border-radius: 20%;
+    transition: opacity 300ms;
+}
+
+
+.resourceReq img {
+    position: absolute;
+    top: -28%;
+}
+
+.selectedResource,
+.selectedNodeName {
+    opacity: 1;
+    color: #FFFFFF;
+}
+
+.exit-star {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.node:hover .nodename{
+    color: rgba(255, 255, 255, 0.9);;
+}
+
+.node:hover .resourceReq{
+    opacity: 1;
+}
+
+.template {
+    display: none;
+}
+
+svg{
+    width: 100%;
+    height: 100%;
+    position:relative;
+    display:block;
+}
+
+#shipNode{
+    position:absolute;
+    width: 20px;
+    transform-origin: top left;
+    transform: translateX(-10px) translateY(-5px);
+    
+}
+
+/* == Title & Toolbar == */
+
+:root {
+    --card-width: 150px;
+    --card-radius: calc(var(--card-width) / 14);
+    --card-height: calc(var(--card-radius) * 24);
+}
+
+h1, h2 {
+    font-family: "A-Space", sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    width: max-content;
+    color: #FFFFFF;
+    display: inline-block;
+}
+
+.right {
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+}
+
+header {
+    margin: 50px 0 0 0;
+    width: 675px;
+    display: grid;
+    grid-template-columns: repeat(5, var(--card-width));
+    gap: 25px
+}
+
+.game-title {
+    grid-column-end: span 5;
+    cursor: default;
+}
+
+.resource-slot {
+    width: var(--card-width);
+    height: var(--card-height);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: grid;
+    justify-content: center;
+    border-radius: 15px;
+    transition: box-shadow 1s;
+}
+
+.resource-slot img{
+    width: calc(var(--card-width)/1.2);
+    align-self: center;
+}
+
+.resource-slot h2{
+    align-self: center;
+    cursor: default;
+}
+
+.requiredResource {
+    box-shadow: 0 0 10px 0px white inset; 
+}
+
+body {
+    overflow: hidden;
+}
+
+/* == Overlays == */
+
+.message-overlay {
+    position:fixed;
+    top: 12vh;
+    left: 4vw;
+    background-color: #000000E0;
+    width: 92vw;
+    height: 85vh;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 50px 110ch auto;
+    grid-template-rows: 100px 65vh;
+    overflow: hidden;
+    transform: translateX(-100vw);
+    transition: transform 2s cubic-bezier( 0.5, 0.5, 0.8, 1.3 );
+}
+
+.message-overlay h2{
+    font-size: 2em;
+    height: min-content;
+    grid-column-start: 2;
+    margin-top: 25px;
+    cursor: default;
+}
+
+.message-letter {
+    grid-column-start: 2;
+    height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100ch;
+
+    /* Scrollbar Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff66 #000000;
+    
+}
+/* Scrollbar Chrome, Edge, and Safari */
+.message-letter::-webkit-scrollbar {
+    width: 12px;
+}
+
+.message-letter::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+.message-letter::-webkit-scrollbar-thumb {
+    background-color: #ffffff66;
+    border-radius: 20px;
+    border: 3px solid #000000;
+}
+
+.message-overlay p{
+    color: #ffffff;
+    font-family: "A-Space";
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    width: 55ch;
+    margin-bottom: 1em;
+    cursor: default;
+}
+
+.review-container {
+    border-left: 1px dashed #FFFFFF66;
+    padding-left: 10%;
+}
+
+#message-score {
+    grid-column-start: 3;
+    margin-top: 0;
+    margin-bottom: 3em;
+    font-size: 1.6em;
+}
+
+#message-score span{
+    margin-left: 4ch;
+}
+
+#restart {
+    color: #ffffff66;
+    font-family: "A-Space";
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+    grid-column-start: 3;
+    cursor: pointer;
+    transition: color 300ms;
+}
+
+#restart:hover{
+    color: #FFFFFF;
+}
+
+.message-slide-in {
+    transform: translateX(0);
+}
+/* == Play Area == */
+
+
+.game-container {
+    width: 90%;
+    margin:auto;
+}
+
+.layout-container {
+    position: relative;
+    width: 100%;
+    top: 50px;
+    display: flex;
+    gap:100px;
+}
+
+#game-grid {
+    width:max-content;
+    display: grid;
+    grid-template-columns: repeat(4, var(--card-width));
+    gap: 25px;
+    transform: perspective(2500px);
+    transform-style: preserve-3d;
+}
+
+.card-slot {
+    border-radius: var(--card-radius);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
+    transform-style: inherit;
+}
+
+.card {
+    position: relative;
+    height: var(--card-height);
+    width: var(--card-width);
+    border-radius: var(--card-radius);
+    transform-style: inherit;
+    transition: transform 200ms ease-in-out;
+}
+
+.card-face {
+    position: absolute;
+    height: var(--card-height);
+    width: var(--card-width);
+    backface-visibility: hidden;
+    transition: transform 400ms ease-in;
+
+}
+
+.card-img {
+    position:absolute;
+}
+
+.card-front {
+    transform: rotateY(-180deg);
+}
+
+.card-selected {
+    transform: scale(1.05);
+    box-shadow: 0 0 3px 1px #FFFFFF;
+    border-radius: var(--card-radius);
+}
+
+.card.flipped .card-back{
+    transform: rotateY(180deg);
+}
+
+.card.flipped .card-front{
+    transform: rotateY(0deg);
+}
+
+.cardHovered {
+    transform: translateZ(40px) translateY(-10px);
+    cursor: pointer;
+}
+
+.glow {
+    animation-name: glow;
+    animation-duration: 2s;
+}
+
+.sparkle{
+    position: absolute;
+    top: -23%;
+    left: -37.5%;
+    height: calc(var(--card-height) * 1.466);
+}
+
+.burn {
+    position: absolute;
+    top: 0;
+    height: var(--card-height);
+}
+
+#flips {
+    transition: color 1000ms ease-out, filter 600ms;
+}
+
+.reducingFlips {
+    color: #df632a;
+    filter: blur(2px);
+}
+
+.fadeAway {
+    animation-name: fadeAway;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeAway {
+    0%, 50% {
+        filter: blur(0px) opacity(1);
+    }
+    100% {
+        filter: blur(10px) opacity(0);
+    }
+}
