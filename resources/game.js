@@ -1198,7 +1198,7 @@ function success() {
     
     const score = document.createElement("h2");
     score.id = "message-score";
-    score.innerHTML = `Efficiency Score: <span>${this.flips.innerText}</span>`
+    score.innerHTML = `Efficiency Score: <span>${game.flips.innerText}</span>`
     
     const restart = document.createElement("h3");
     restart.id = "restart";
@@ -1224,7 +1224,7 @@ function success() {
         We are pleased to report that our progress continues to be on track and our systems remain fully operational.<br><br>
         The crew has been in high spirits, buoyed by the knowledge that we are under the guidance of such a capable navigator.<br><br>
         We are making good time.<br><br>
-        There will be no further correspondence until we reach ${this.destinationStarName}.<br><br><br> 
+        There will be no further correspondence until we reach ${game.destinationStarName}.<br><br><br> 
         Wishing you clear skies and smooth sailing,<br><br><br><br>
         
         Elegy Blake,<br><br>First Officer / Devemora<br>
@@ -1258,7 +1258,7 @@ function failure() {
     
     const score = document.createElement("h2");
     score.id = "message-score";
-    score.innerHTML = `Efficiency Score: <span>${this.flips.innerText}</span>`
+    score.innerHTML = `Efficiency Score: <span>${game.flips.innerText}</span>`
     
     const restart = document.createElement("h3");
     restart.id = "restart";
@@ -1287,7 +1287,7 @@ function failure() {
         We pray that this message reaches you.<br><br><br>
         As we traverse the boundless void aboard the ${shipName}, we find ourselves in a dire predicament, and we must address it with utmost urgency.<br><br>
         Our journey, once filled with hope and determination, has taken a devastating turn.<br><br>
-        We are lost, and we have little chance of ever reaching ${this.destinationStarName}.<br><br> 
+        We are lost, and we have little chance of ever reaching ${game.destinationStarName}.<br><br> 
         Furthermore, I regret to inform you that the responsibility for our current plight rests heavily upon your shoulders, dear Navigator. Your navigational decisions, once trusted and revered, have led us astray in this perilous abyss.<br><br>
         ${lastKnown}
         The crew's morale has plummeted as uncertainty and fear grip our hearts. Mutiny looms in every shadow.<br><br>
