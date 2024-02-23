@@ -237,28 +237,32 @@ class NavigatorGame {
     }
 
     set currentStar(newStar) {
-        this._currentStar = newStar;
-        
-        // Update currentstar settings
-        starfield[newStar.id].reached = true;
-        
-        // Update the whole starfield
-        this.routesAvailable = this.currentStar.connectsTo;
-        for (let star in starfield) {
-            starfield[star].accessible = false;
-            this.starChart[star].classList.add("inaccessibleNode")
-            this.starChart[star].classList.remove("currentNode")
+        if (newStar) {
+            this._currentStar = newStar;
             
+            // Update currentstar settings
+            starfield[newStar.id].reached = true;
+            
+            // Update the whole starfield
+            this.routesAvailable = this.currentStar.connectsTo;
+            for (let star in starfield) {
+                starfield[star].accessible = false;
+                this.starChart[star].classList.add("inaccessibleNode")
+                this.starChart[star].classList.remove("currentNode")
+                
+            }
+            for (let i in this.routesAvailable) {
+                let star = this.routesAvailable[i];
+                starfield[star].accessible = true;
+                this.starChart[star].classList.remove("inaccessibleNode")
+            }
+            
+            // Update currentstar visuals
+            let starVisual = this.starChart[newStar.id];
+            starVisual.classList.add("currentNode")
+        } else {
+            this._currentStar = null;
         }
-        for (let i in this.routesAvailable) {
-            let star = this.routesAvailable[i];
-            starfield[star].accessible = true;
-            this.starChart[star].classList.remove("inaccessibleNode")
-        }
-        
-        // Update currentstar visuals
-        let starVisual = this.starChart[newStar.id];
-        starVisual.classList.add("currentNode")
     }
 
     get selectedStar() {
@@ -321,6 +325,7 @@ class NavigatorGame {
         assignStarNames(starfield);
         assignCoordinates(starfield);
         plotRoutes(starfield);
+        game.currentStar = null;
         game.routesAvailable = [];
         game.initiallyAvailableRoutes()
 
@@ -397,7 +402,7 @@ class NavigatorGame {
                 this.classList.remove("awaitingHover");
                 this.classList.remove("cardHovered");
             })
-        // console.log(`${index+1}: ${card.value}`)}  //Debug
+        //console.log(`${index+1}: ${card.value}`)  //Debug
         });
     }
 
