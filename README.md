@@ -41,6 +41,11 @@ I am working on improving Starlight Navigator and adding new features. Here are 
 
 For any inquiries, feedback, or support, please contact me at: fake.alex.blue@gmail.com.
 
+**Known Issues**
+- Cards sometimes get stuck in the 'up' position, or rising and falling repeatedly.
+- Reaching 'Founders Star' with exactly 0 flips remaining causes you to simultaneously Fail *and* Succeed.
+- It is possible to get a negative score if the player clicks quickly.
+
 ## Credits
 
 - Developed by Alex Blue, as part of an application for [Founders & Coders](https://www.foundersandcoders.com/) software development course.
