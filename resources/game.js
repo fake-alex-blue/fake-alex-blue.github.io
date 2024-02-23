@@ -724,7 +724,7 @@ class NavigatorGame {
             }
             line.setAttribute('stroke-dasharray', '0');
 
-            this.currentStar = this.selectedStar;
+            game.currentStar = this.selectedStar;
             audioController.travel();
             if (game.destinationStar.reached) {
                 setTimeout(() =>{
@@ -1220,7 +1220,7 @@ function success() {
     successMessageText.innerHTML = `Dear Navigator,<br><br><br>
         We pray that this message finds you well.<br><br>
         As we journey through the vast expanse of space aboard the ${shipName}, we wanted to take a moment to express our sincerest gratitude for the invaluable role you've played in charting our course.<br><br>
-        Your skillful navigation has been instrumental in guiding us safely through this hostile void.<br><br> Thanks to your expertise, our voyage has been smooth and steady, allowing us to maintain course towards our destination at ${this.destinationStarName} with confidence and precision.<br><br>
+        Your skillful navigation has been instrumental in guiding us safely through this hostile void.<br><br> Thanks to your expertise, our voyage has been smooth and steady, allowing us to maintain course towards our destination at ${game.destinationStarName} with confidence and precision.<br><br>
         We are pleased to report that our progress continues to be on track and our systems remain fully operational.<br><br>
         The crew has been in high spirits, buoyed by the knowledge that we are under the guidance of such a capable navigator.<br><br>
         We are making good time.<br><br>
