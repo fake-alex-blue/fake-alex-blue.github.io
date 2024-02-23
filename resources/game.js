@@ -1214,7 +1214,7 @@ function success() {
 
 
     
-    const shipName = game.shipNames[Math.floor(Math.random()* shipNames.length)]
+    const shipName = game.shipNames[Math.floor(Math.random()* game.shipNames.length)]
     
     successMessageTitle.textContent = "Course Charted: Success"
     successMessageText.innerHTML = `Dear Navigator,<br><br><br>
@@ -1273,7 +1273,7 @@ function failure() {
     });
 
 
-    const shipName = game.shipNames[Math.floor(Math.random()* shipNames.length)]
+    const shipName = game.shipNames[Math.floor(Math.random()* game.shipNames.length)]
     let lastKnown = ""
     
     if(game.currentStar) {
